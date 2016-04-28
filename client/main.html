@@ -1,0 +1,18 @@
+<head>
+    <title>simple</title>
+</head>
+
+<body>
+    <h1>Reproduce issue with multi-schema inserts</h1>
+    <hr/>
+    {{> hello}}
+</body>
+
+<template name="hello">
+    <h2>Add Type1</h2>
+    {{> quickForm collection="Things" schema="Schemas.Type1" id="insertThing1" type="insert" }}
+    <button class="force">Force Insert</button>
+    <hr/>
+    <h2>Add Type2</h2>
+    {{> quickForm collection="Things" schema="Schemas.Type2" id="insertThing2" type="insert" }}
+</template>
